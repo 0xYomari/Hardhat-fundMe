@@ -6,7 +6,7 @@ import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
 
 library PriceConverter {
     function getLatestPrice(AggregatorV3Interface priceFeed)
-        public
+        internal
         view
         returns (uint256)
     {
@@ -16,7 +16,7 @@ library PriceConverter {
     }
 
     function getConversion(uint256 ethValue, AggregatorV3Interface priceFeed)
-        public
+        internal
         view
         returns (uint256)
     {
